@@ -1,0 +1,234 @@
+@import "../node_modules/bulma/bulma.sass";
+
+body {
+  background: black;
+}
+
+.positioning {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  background: black;
+}
+
+.white-border {
+  border: 2px white solid;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.diamond {
+  height: 100px;
+  width: 100px;
+}
+
+.inherit-height {
+  height: inherit;
+}
+
+.full-screen {
+  display: flex;
+  flex-direction: row; // this is default
+  align-items: stretch; // this will stretch the children vertically
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.background-opacity {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.diamond:hover {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.line1 {
+  width: 46px;
+  height: 47px;
+  border-bottom: 2px solid white;
+  -webkit-transform: translateY(20px) translateX(5px) rotate(-26deg);
+  position: absolute;
+  top: -54px;
+  left: -18px;
+}
+
+.line2 {
+  width: 112px;
+  height: 47px;
+  border-bottom: 2px solid white;
+  -webkit-transform: translateY(20px) translateX(5px) rotate(-26deg);
+  position: absolute;
+  top: -40px;
+  left: -21px;
+}
+
+$bgColor: red;
+$color: white;
+
+@-webkit-keyframes rattle {
+  0% {
+    -webkit-transform: translateX(-2px);
+    letter-spacing: -0.012em;
+  }
+
+  25% {
+    -webkit-transform: translateY(-2px) rotate(-1deg);
+    font-size: 6.9999em;
+  }
+
+  50% {
+    -webkit-transform: translateX(1px);
+    text-shadow: 0 1px 0 #000,
+    1px 1px 0 $bgColor,
+    2px 2px 0 $color,
+    -3px -5px 0 $bgColor,
+    -4px -6px 0 rgba($color, 0.6);
+  }
+
+  75% {
+    -webkit-transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-2px);
+  }
+}
+
+.multi-ani {
+  -webkit-animation: rattle 0.08s infinite alternate;
+  color: $color;
+  font-family: 'Jolly Lodger', cursive;
+  font-size: 7em;
+  text-align: center;
+  text-shadow: 0 4px 0 #000,
+  -2px -2px 0 $bgColor,
+  -3px -3px 0 $color;
+}
+
+.mouse-over {
+  cursor: pointer;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: red;
+}
+
+.shadow {
+  text-shadow: 2px 2px red;
+}
+
+.left-float-button {
+  width: 50px;
+  float: left;
+  height: 50px;
+  position: absolute;
+  top: 45%;
+  left: -10%;
+}
+
+.right-float-button {
+  width: 50px;
+  float: left;
+  height: 50px;
+  position: absolute;
+  top: 45%;
+  right: -10%;
+}
+
+.arrows{
+  cursor: pointer;
+}
+
+.arrows:hover{
+  color: red !important;
+}
+
+@media all and (min-width: 0px) and (max-width: 768px) {
+  .size {
+    min-width: 65vw;
+    max-width: 72vw;
+  }
+
+  .left-float-button {
+    left: -20%;
+  }
+
+  .right-float-button {
+    right: -20%;
+  }
+
+  .top{
+    top: -40px;
+  }
+}
