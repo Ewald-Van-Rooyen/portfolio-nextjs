@@ -5,7 +5,7 @@ const Career: React.FunctionComponent = () => {
         <div className={"columns is-mobile level"}>
             <p className={"is-size-4 is-family-monospace has-text-white is-size-6-mobile"}>
                 I have been in the software development space for a while.
-                This has given me the opportunity to work with a few of amazing companies.
+                This has given me the opportunity to work with a few amazing companies.
 
                 <br/>
                 <div className={"is-size-5"}>

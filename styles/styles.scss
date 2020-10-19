@@ -234,8 +234,12 @@ a:hover {
   color: red !important;
 }
 
-h1{
+h1 {
   margin-top: 0 !important;
+}
+
+.container-min-width {
+  min-width: 200px;
 }
 
 @media all and (min-width: 0px) and (max-width: 768px) {
