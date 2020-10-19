@@ -24,20 +24,32 @@ const Container: React.FunctionComponent<ContainerPropsInterface> = (props) => {
     const navigateScreens = (direction: DIRECTION) => {
         if (direction === DIRECTION.RIGHT) {
             if (props.currentPage === PAGE_NAME.HELLO_WORLD) {
+                props.clickCallback(PAGE_NAME.CAREER);
+            } else if (props.currentPage === PAGE_NAME.CAREER) {
                 props.clickCallback(PAGE_NAME.PROJECT_SETUP);
+            } else if (props.currentPage === PAGE_NAME.PROJECT_SETUP) {
+                props.clickCallback(PAGE_NAME.CONTACT_ME);
             }
         } else {
-            if (props.currentPage === PAGE_NAME.PROJECT_SETUP) {
+            if (props.currentPage === PAGE_NAME.CAREER) {
                 props.clickCallback(PAGE_NAME.HELLO_WORLD);
+            } else if (props.currentPage === PAGE_NAME.PROJECT_SETUP) {
+                props.clickCallback(PAGE_NAME.CAREER);
+            } else if (props.currentPage === PAGE_NAME.CONTACT_ME) {
+                props.clickCallback(PAGE_NAME.PROJECT_SETUP);
             }
         }
     };
 
     const navigationButtons = (
         <>
-            <div onClick={()=>{navigateScreens(DIRECTION.LEFT)}} className={"arrows"}><BiLeftArrow className={"left-float-button has-text-white is-mobile arrows"}/>
+            <div onClick={() => {
+                navigateScreens(DIRECTION.LEFT)
+            }} className={"arrows"}><BiLeftArrow className={"left-float-button has-text-white is-mobile arrows"}/>
             </div>
-            <div onClick={()=>{navigateScreens(DIRECTION.RIGHT)}} className={"arrows"}><BiRightArrow className={"right-float-button has-text-white is-mobile arrows"}/>
+            <div onClick={() => {
+                navigateScreens(DIRECTION.RIGHT)
+            }} className={"arrows"}><BiRightArrow className={"right-float-button has-text-white is-mobile arrows"}/>
             </div>
         </>);
 
@@ -53,6 +65,7 @@ const Container: React.FunctionComponent<ContainerPropsInterface> = (props) => {
                     </div>
                     <div className="background-opacity container has-text-centered p-6 white-border is-block size">
                         {props.isNavigationEnabled && navigationButtons}
+
                         <h1 className={`is-size-1 is-family-monospace has-text-white ${props.doesHaveRedShadow ? "shadow" : ""}`}>
                             {props.heading}
                         </h1>

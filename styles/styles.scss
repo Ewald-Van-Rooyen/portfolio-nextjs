@@ -170,6 +170,26 @@ $color: white;
   transition-duration: 1s;
 }
 
+.rotate-135 {
+  transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
 .rotate-0 {
   transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -185,7 +205,7 @@ a:hover {
 }
 
 .shadow {
-  text-shadow: 2px 2px red;
+  text-shadow: 3px 3px red;
 }
 
 .left-float-button {
@@ -206,15 +226,24 @@ a:hover {
   right: -10%;
 }
 
-.arrows{
+.arrows {
   cursor: pointer;
 }
 
-.arrows:hover{
+.arrows:hover {
   color: red !important;
 }
 
+h1{
+  margin-top: 0 !important;
+}
+
 @media all and (min-width: 0px) and (max-width: 768px) {
+
+  .is-not-visible-mobile {
+    display: none;
+  }
+
   .size {
     min-width: 65vw;
     max-width: 72vw;
@@ -228,7 +257,7 @@ a:hover {
     right: -20%;
   }
 
-  .top{
+  .top {
     top: -40px;
   }
 }
