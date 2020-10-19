@@ -62,17 +62,17 @@ class LandingPage extends React.Component<{}, LandingStateStateInterface> {
                     currentPosition: newPosition
                 });
                 break;
-            case PAGE_NAME.PROJECT_SETUP:
+            case PAGE_NAME.CAREER:
                 this.setState({
                     diamondPositionClass: "rotate-90",
-                    heading: "PROJECT SETUP",
+                    heading: "CAREER",
                     currentPosition: newPosition
                 });
                 break;
-            case PAGE_NAME.CAREER:
+            case PAGE_NAME.PROJECT_SETUP:
                 this.setState({
                     diamondPositionClass: "rotate-135",
-                    heading: "CAREER",
+                    heading: "PROJECT SETUP",
                     currentPosition: newPosition
                 });
                 break;
