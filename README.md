@@ -1,15 +1,15 @@
-#Ewald Van Rooyen Developer Showcase
+# Ewald Van Rooyen Developer Showcase
 
 ![Wow](public/wow.gif)
 
 Hi this is the repository for my online developer profile.
 
 This application was built using:
-    * React
-    * TypeScript
-    * Nextjs
-    * React-icons
-    * Bulma CSS
+* React
+* TypeScript
+* Nextjs
+* React-icons
+* Bulma CSS
 
 ## Available Scripts
 
