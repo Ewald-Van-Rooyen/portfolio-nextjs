@@ -1,4 +1,9 @@
-Hi this is the repository for my online developer show-case/profile.
+#Ewald Van Rooyen Developer Showcase
+
+![Wow](public/wow.gif)
+
+Hi this is the repository for my online developer profile.
+
 This application was built using:
     * React
     * TypeScript
